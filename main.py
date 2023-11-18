@@ -17,8 +17,8 @@ class Film(BaseModel):
 app = FastAPI()
 
 PROXIES = {
-    "all://": "socks5://user128948:ukb1ec@185.236.77.18:17732",
-    # "all://": "http://user128948:ukb1ec@185.236.77.18:7732",
+    # "all://": "socks5://user128948:ukb1ec@185.236.77.18:17732",
+    "all://": "http://user128948:ukb1ec@185.236.77.18:7732",
 }
 
 
@@ -27,7 +27,7 @@ def extract_number(text: str) -> str:
 
 
 async def fetch_movies(query: str, page: int = 1) -> dict | None:
-    search_url = f"https://kinogo.at/index.php?do=search"
+    search_url = f"https://kinogo.la/index.php?do=search"
     async with httpx.AsyncClient(proxies=PROXIES) as client:
         data = {
             "do": "search",
