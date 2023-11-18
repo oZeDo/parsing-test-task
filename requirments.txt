@@ -1,0 +1,9 @@
+fastapi==0.104.1
+httpx==0.25.1
+beautifulsoup4==4.12.2
+lxml==4.9.3
+pydantic==2.5.1
+pytest
+pytest-mock
+loguru
+socksio
